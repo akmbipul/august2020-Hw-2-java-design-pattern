@@ -14,5 +14,5 @@ package creational.factory.design.pattern;
   implement those.
  */
 public interface Device {
-
+    public void spec();
 }

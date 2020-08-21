@@ -10,5 +10,21 @@ package creational.singleton.design.pattern;
 
  */
 public class Singleton {
+    private static  Integer counter = 0;
+    private static  Singleton singleton;
 
+    //This will show the number or of object is created
+    private Singleton() {
+        counter++;
+        System.out.println("Object Created - "+counter.toString());
+    }
+    public static Singleton getInstance(){
+        if(singleton==null){
+            singleton=new Singleton();
+        }
+        return singleton;
+    }
+    public void printDetails(String message){
+        System.out.println(message);
+    }
 }
